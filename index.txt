@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuer — Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            position: absolute;
+            z-index: 10;
+            font-size: 64px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .grid {
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: #0f0f0f;
+            border: 1px solid #1f1f1f;
+            border-radius: 16px;
+            transition: 0.25s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.15) rotate(2deg);
+            border-color: #ddd;
+        }
+
+        .glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            filter: blur(180px);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="title">Recuer</div>
+
+        <div class="grid">
+            <!-- 25 boxes -->
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        </div>
+
+        <div class="glow"></div>
+    </div>
+
+</body>
+</html>
